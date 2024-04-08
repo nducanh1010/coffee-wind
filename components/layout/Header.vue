@@ -1,19 +1,43 @@
 import { NuxtLink } from '#build/components';
+<script setup>
+import { ref,watchEffect } from "vue";
+const topMenu = ref(null);
+const toggleTopMenu = ref(null);
+const isExpanded = ref(false);
+onMounted(() => {
+  document.addEventListener("click", handleClickTopMenu);
+});
+const handleClickTopMenu = (event) => {
+  // click iside icon
+  if (toggleTopMenu.value.contains(event.target)) {
+    isExpanded.value = !isExpanded.value;
+    return;
+  }
+  if (topMenu.value.classList.contains("ct-topmenu-expanded")) {
+    isExpanded.value = false;
+  }
+};
+// click outside dropdown icon
+const handleDropDown = () => {};
+</script>
 <template>
-  <header class="py-6 mx-10">
-    <nav class="flex flex-row justify-between items-center">
+  <header class="p-6 mx-auto">
+    <nav class="flex flex-row justify-between items-center relative">
       <div
         class="logo basis-2/6 text-center text-xl font-semibold cursor-pointer"
       >
         CoffeeStyle.
       </div>
       <ul
-        class="flex items-center justify-end gap-8 uppercase text-sm text-gray-500 font-medium basis-3/6"
+        ref="topMenu"
+        id="ct-top-menu"
+        :class="isExpanded ? 'ct-topmenu-expanded ' : 'hidden'"
+        class="basis-3/6 lg:flex lg:justify-end lg:items-center lg:gap-8 uppercase text-sm text-gray-500 font-medium"
       >
         <li class="ct-top-menu-item">
           <NuxtLink href="#">Home</NuxtLink>
         </li>
-        <li class="ct-top-menu-item">
+        <li class="ct-top-menu-item ct-top-menu-item-active">
           <NuxtLink href="#">Products</NuxtLink>
         </li>
         <li class="ct-top-menu-item">
@@ -33,7 +57,7 @@ import { NuxtLink } from '#build/components';
         </li>
       </ul>
       <ul
-        class="basis-1/6 flex justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium"
+        class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium"
       >
         <li class="ct-top-menu-item">
           <NuxtLink href="#" target="blank" class="flex items-center">
@@ -56,6 +80,26 @@ import { NuxtLink } from '#build/components';
           </NuxtLink>
         </li>
       </ul>
+      <div
+        class="basis-1/6 lg:hidden flex items-center cursor-pointer px-3 sm:px-4"
+      >
+        <svg
+          ref="toggleTopMenu"
+          @click="handleDropDown"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ct-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
     </nav>
   </header>
 </template>
