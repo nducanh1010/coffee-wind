@@ -1,6 +1,8 @@
+<script setup>
+</script>
 <template>
   <div>
-    <div class="slider">slider</div>
+    <home-slider />
     <!--End of slider-->
     <div class="story">story</div>
     <!--End of story-->

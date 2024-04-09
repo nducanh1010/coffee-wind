@@ -1,19 +1,20 @@
 import { NuxtLink } from '#build/components';
-<script setup>
-import { ref,watchEffect } from "vue";
-const topMenu = ref(null);
-const toggleTopMenu = ref(null);
+<script lang="ts" setup>
+import { navigationList } from "~/const/navigation";
+import { ref, watchEffect } from "vue";
+const topMenu = ref<HTMLElement | null>(null);
+const toggleTopMenu = ref<HTMLElement | null>(null);
 const isExpanded = ref(false);
 onMounted(() => {
   document.addEventListener("click", handleClickTopMenu);
 });
-const handleClickTopMenu = (event) => {
+const handleClickTopMenu = (event: Event) => {
   // click iside icon
-  if (toggleTopMenu.value.contains(event.target)) {
+  if (toggleTopMenu.value?.contains(event.target as HTMLElement)) {
     isExpanded.value = !isExpanded.value;
     return;
   }
-  if (topMenu.value.classList.contains("ct-topmenu-expanded")) {
+  if (topMenu.value?.classList.contains("ct-topmenu-expanded")) {
     isExpanded.value = false;
   }
 };
@@ -34,7 +35,10 @@ const handleDropDown = () => {};
         :class="isExpanded ? 'ct-topmenu-expanded ' : 'hidden'"
         class="basis-3/6 lg:flex lg:justify-end lg:items-center lg:gap-8 uppercase text-sm text-gray-500 font-medium"
       >
-        <li class="ct-top-menu-item">
+        <li v-for="(item, index) in navigationList" class="ct-top-menu-item">
+          <NuxtLink :href="item.to">{{ item.text }}</NuxtLink>
+        </li>
+        <!-- <li class="ct-top-menu-item">
           <NuxtLink href="#">Home</NuxtLink>
         </li>
         <li class="ct-top-menu-item ct-top-menu-item-active">
@@ -54,7 +58,7 @@ const handleDropDown = () => {};
         </li>
         <li class="ct-top-menu-item">
           <NuxtLink href="#" target="blank">GrassDeveloper</NuxtLink>
-        </li>
+        </li> -->
       </ul>
       <ul
         class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium"
