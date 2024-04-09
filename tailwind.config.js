@@ -14,7 +14,7 @@ module.exports = {
         Karla: ["Karla", "sans-serif"]
       },
       colors: {
-        "light-coffee": "#C89F94"
+        coffee: { 50: "#E8D6D0", 200: "#C89F94", 400: "#a25f4b" , 600: "#744838" }
       },
       keyframes: {
         slideDown: {
@@ -25,8 +25,8 @@ module.exports = {
       animation: {
         slideDown: "slideDown .4s ease-in-out"
       },
-      backgroundImage:{
-        'slider-bg':'url("/coffee-slider.jpg")'
+      backgroundImage: {
+        "slider-bg": 'url("/coffee-slider.jpg")'
       }
     }
   },

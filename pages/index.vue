@@ -1,18 +1,17 @@
-<script setup>
-</script>
+<script setup></script>
 <template>
   <div>
     <home-slider />
     <!--End of slider-->
-    <div class="story">story</div>
+    <home-story />
     <!--End of story-->
-    <div class="featured-mugs">featured-mugs</div>
+    <home-featured-mugs />
     <!--End of featured-mugs-->
-    <div class="more-products">more-products</div>
+    <home-more-products/>
     <!--End of more-products-->
-    <div class="coffee-magazine">coffee-magazine</div>
+    <home-coffee-magazine/>
     <!--End of coffee-magazine-->
-    <div class="lifestyle-stories">lifestyle-stories</div>
+    <home-lifestyle-stories/>
     <!--End of lifestyle-stories-->
     <div class="subscribe-us">subscribe-us</div>
     <!--End of subscribe-us-->
