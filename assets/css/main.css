@@ -24,8 +24,11 @@
   @apply flex justify-center items-center mb-24;
 }
 .ct-subheadline-label {
-  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-[13px]
+  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-xs text-center
 }
 .ct-subheadline-deco-line {
   @apply w-8 h-px bg-gray-200;
+}
+.ct-button{
+@apply tracking-wider uppercase py-4 px-8 text-[13px] text-center font-semibold cursor-pointer hover:bg-opacity-90
 }

@@ -12,7 +12,7 @@
         </div>
         <div class="flex justify-center">
           <div
-            class="uppercase bg-white text-gray-900 w-max tracking-wider py-4 px-8 text-sm font-semibold cursor-pointer hover:bg-opacity-90"
+            class=" ct-button bg-white text-gray-900 w-max "
           >
             Explore Our Products
           </div>
