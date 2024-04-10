@@ -7,11 +7,13 @@
     <!--End of story-->
     <home-featured-mugs />
     <!--End of featured-mugs-->
-    <home-more-products/>
+    <home-more-products />
     <!--End of more-products-->
-    <home-coffee-magazine/>
+    <home-coffee-magazine />
     <!--End of coffee-magazine-->
-    <home-lifestyle-stories/>
+    <home-parallax />
+    <!-- End of parallax -->
+    <home-lifestyle-stories />
     <!--End of lifestyle-stories-->
     <div class="subscribe-us">subscribe-us</div>
     <!--End of subscribe-us-->

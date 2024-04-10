@@ -30,9 +30,9 @@
         class="ct-magazine-images order-1 md:order-2 basis-1/2 md:flex md:flex-row gap-5 w-full h-full mb-5 md:mb-0"
       >
         <div
-          class="ct-big-image basis-2/3 mb-3  md:mb-0 h-[280px] bg-[url('book.jpg')] bg-cover bg-no-repeat bg-center"
+          class="ct-big-image basis-2/3 mb-3 xs:mb-5  md:mb-0 h-[280px] bg-[url('book.jpg')] bg-cover bg-no-repeat bg-center"
         ></div>
-        <div class="ct-small-images basis-1/3 flex flex-row md:flex-col gap-5">
+        <div class="ct-small-images basis-1/3 flex flex-row md:flex-col gap-3 xs:gap-5">
           <div
             class="h-[130px] xs:h-[200px] md:h-[130px] basis-1/2 md:basis-full bg-[url('small-img.jpg')] bg-cover bg-no-repeat bg-center"
           ></div>

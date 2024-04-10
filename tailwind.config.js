@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+// @ts-ignore
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -11,10 +13,7 @@ module.exports = {
   theme: {
     screens: {
       xs: "480px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      "2xl": "1536px"
+      ...defaultTheme.screens
     },
     extend: {
       fontFamily: {
