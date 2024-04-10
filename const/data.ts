@@ -5,6 +5,13 @@ interface IFeatureMugs {
   name: string;
   pictureUrl: string;
 }
+interface ILifeStyleStory {
+  to?: string;
+  thumbnail: string;
+  description?: string;
+  time: string;
+  pictureUrl: string;
+}
 export const FeatureMugList: IFeatureMugs[] = [
   {
     to: "#",
@@ -77,5 +84,33 @@ export const MoreMugsList: IFeatureMugs[] = [
     price: 29.0,
     name: "Summer Designer Cup",
     pictureUrl: "coffee-mug-8.jpg"
+  }
+];
+export const LifeStoryList: ILifeStyleStory[] = [
+  {
+    to: "#",
+    thumbnail:
+      "Health Check: why do I get a headache when I haven’t had my coffee?",
+    description:
+      "It is a paradisematic country, in which roasted parts of sentences fly into your mouth",
+    time: "OCTOBER 9, 2018",
+    pictureUrl: "life-style-1.jpg"
+  },
+  {
+    to: "#",
+    thumbnail: "How long does a cup of coffee keep you awake?",
+    description:
+      "It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.",
+    time: "OCTOBER 9, 2018",
+    pictureUrl: "life-style-2.jpg"
+  },
+  {
+    to: "#",
+    thumbnail:
+      "Recent research suggests that heavy coffee drinkers may reap health benefits.",
+    description:
+      "It is a paradisematic country, in which roasted parts of sentences fly into your mouth",
+    time: "OCTOBER 9, 2018",
+    pictureUrl: "life-style-3.jpg"
   }
 ];
