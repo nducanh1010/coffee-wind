@@ -9,6 +9,13 @@ module.exports = {
     "./error.vue"
   ],
   theme: {
+    screens: {
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      "2xl": "1536px"
+    },
     extend: {
       fontFamily: {
         Karla: ["Karla", "sans-serif"]
@@ -45,7 +52,6 @@ module.exports = {
         slideDown: "slideDown .4s ease-in-out",
         fadeIn: "fadeIn .3s ease-in-out",
         fadeOut: "fadeOut .3s ease-in-out"
-
       },
       backgroundImage: {
         "slider-bg": 'url("/coffee-slider.jpg")'
