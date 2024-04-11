@@ -15,7 +15,7 @@
     <!-- End of parallax -->
     <home-lifestyle-stories />
     <!--End of lifestyle-stories-->
-    <div class="subscribe-us">subscribe-us</div>
+    <home-subscribe/>
     <!--End of subscribe-us-->
   </div>
 </template>

@@ -3,12 +3,12 @@
     <div
       class="content_wrapper font-Karla max-w-screen-2xl text-base mx-auto px-8"
     >
-      <Header />
+      <LayoutHeader />
       <main>
         <slot />
       </main>
 
-      <Footer />
+      <LayoutFooter />
     </div>
   </div>
 </template>
