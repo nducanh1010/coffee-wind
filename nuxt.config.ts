@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   // config directory
   app: {
     head: {
@@ -27,11 +28,7 @@ export default defineNuxtConfig({
     }
   },
   nitro: {
-    firebase: {
-      gen: 2
-    }
-  }
-  ,build:{
-  
-  }
+    preset: "node-server"
+  },
+  build: {}
 });
