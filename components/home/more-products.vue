@@ -12,7 +12,7 @@ import { MoreMugsList } from "~/const/data";
       <div v-for="(item, index) in MoreMugsList" class="ct-product-card">
         <div
           :style="`background-image: url( '/${item.pictureUrl}')`"
-          class="h-[380px]  bg-cover bg-no-repeat bg-bottom"
+          class="h-[380px] bg-cover bg-no-repeat bg-bottom"
         >
           <NuxtLink :href="item.to" alt="kofe-img">
             <div
@@ -25,7 +25,7 @@ import { MoreMugsList } from "~/const/data";
                 On Sale.
               </div>
               <div
-                class="ct-button absolute bottom-4 bg-white left-1/2 -translate-x-1/2 hidden  group-hover:block group-hover:animate-fadeIn text-gray-900 w-11/12"
+                class="ct-button absolute bottom-4 bg-white left-1/2 -translate-x-1/2 hidden group-hover:block group-hover:animate-fadeIn text-gray-900 w-11/12"
               >
                 Explore Mug
               </div>
