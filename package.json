@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "deployfb":"cd .ouput/server && rd /s /q node_modules && npm i && cd .. && firebase deploy",
+    "deployfb": "cd .ouput/server && rd /s /q node_modules && npm i && cd .. && firebase deploy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "nuxt dev",
@@ -13,6 +13,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.9.2",
     "nuxt": "^3.11.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
