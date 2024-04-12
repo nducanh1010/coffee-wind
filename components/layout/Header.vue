@@ -22,7 +22,7 @@ const handleClickTopMenu = (event: Event) => {
 const handleDropDown = () => {};
 </script>
 <template>
-  <header class="p-6 mx-auto">
+  <header class="p-6 mx-auto w-full max-w-screen-2xl">
     <nav class="flex flex-row justify-between items-center relative">
       <div
         class="logo basis-2/6 text-center text-xl font-semibold cursor-pointer"

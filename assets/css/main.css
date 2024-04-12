@@ -1,3 +1,4 @@
+@import "parallax.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,7 +22,7 @@
   @apply absolute top-10 z-50 w-full text-center bg-white animate-slideDown;
 }
 .ct-subheadline {
-  @apply flex justify-center items-center mb-24;
+  @apply flex justify-center items-center my-16;
 }
 .ct-subheadline-label {
   @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-xs text-center;
@@ -30,5 +31,15 @@
   @apply w-8 h-px bg-gray-200;
 }
 .ct-button {
-  @apply tracking-wider uppercase  rounded-sm py-4 px-8 text-[13px] text-center font-semibold cursor-pointer hover:bg-opacity-90 duration-200;
+  @apply tracking-wider  uppercase  rounded-sm py-4 px-8 text-[13px] text-center font-semibold cursor-pointer hover:bg-opacity-90 duration-200;
+}
+
+@media screen(xl) {
+  .ct-parallax{
+    height:70vh;
+    transform-style:preserve-3d
+  }
+  .ct-parallax-image{
+    transform:translateZ(-1px) scale(1.5);
+  }
 }

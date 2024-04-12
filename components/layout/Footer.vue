@@ -68,7 +68,7 @@
         </div>
         <div class="mb-4  ">We’re Always Happy to Help</div>
         <div class="mb-16 text-gray-800 font-semibold text-[22px] tracking-wide hover:text-coffee-400">nducanh1010@gmail.com</div>
-        <div class=" text-gray-400 hover:text-coffee-400">Powered by Coffee Lover.</div>
+        <div class=" text-gray-400 hover:text-coffee-400">Inspiration by Coffee Lover.</div>
       </div>
     </div>
   </footer>

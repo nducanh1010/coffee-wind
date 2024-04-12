@@ -6,7 +6,7 @@
     </div>
     <div class="ct-subheadline-deco-line"></div>
   </div>
-  <div class="coffee-magazine w-[95%] xl:w-[65%] mx-auto mb-24">
+  <div class="coffee-magazine w-[95%] xl:w-[65%] mx-auto mb-12">
     <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
       <div
         class="ct-magazine-post text-center order-2 md:order-1 md:text-left basis-1/2 pl-8 xl:pl-12"

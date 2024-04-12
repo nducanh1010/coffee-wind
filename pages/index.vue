@@ -11,11 +11,7 @@
     <!--End of more-products-->
     <home-coffee-magazine />
     <!--End of coffee-magazine-->
-    <home-parallax />
-    <!-- End of parallax -->
-    <home-lifestyle-stories />
-    <!--End of lifestyle-stories-->
-    <home-subscribe/>
-    <!--End of subscribe-us-->
+   
+   
   </div>
 </template>

@@ -7,7 +7,7 @@ import { MoreMugsList } from "~/const/data";
     <div class="ct-subheadline-label">More Products</div>
     <div class="ct-subheadline-deco-line"></div>
   </div>
-  <div class="more-products w-[95%] xl:w-[65%] mx-auto mb-16">
+  <div class="more-products w-[95%] xl:w-[65%] mx-auto ">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4">
       <div v-for="(item, index) in MoreMugsList" class="ct-product-card">
         <div

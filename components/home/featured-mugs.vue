@@ -7,7 +7,7 @@ import { FeatureMugList } from "~/const/data";
     <div class="ct-subheadline-label">Featured Mugs</div>
     <div class="ct-subheadline-deco-line"></div>
   </div>
-  <div class="featured-mugs w-[95%] lg:w-[65%] mx-auto mb-24">
+  <div class="featured-mugs w-[95%] lg:w-[65%] mx-auto ">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4">
       <div v-for="(item, index) in FeatureMugList" class="ct-product-card">
         <div

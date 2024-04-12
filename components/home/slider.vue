@@ -1,5 +1,7 @@
 <template>
-  <div class="slider h-[530px] bg-slider-bg bg-cover bg-no-repeat bg-bottom">
+  <div
+    class="slider max-w-screen-2xl w-full h-[600px] bg-slider-bg bg-cover bg-no-repeat bg-bottom"
+  >
     <div
       class="w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-40"
     >
@@ -11,9 +13,7 @@
           life, made to move and grow.
         </div>
         <div class="flex justify-center">
-          <div
-            class=" ct-button bg-white text-gray-900 w-max "
-          >
+          <div class="ct-button bg-white text-gray-900 w-max">
             Explore Our Products
           </div>
         </div>

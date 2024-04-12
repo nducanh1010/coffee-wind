@@ -1,13 +1,20 @@
 <template>
   <div id="root">
     <div
-      class="content_wrapper font-Karla max-w-screen-2xl text-base mx-auto px-8"
+      class="content-wrapper ct-no-parallax font-Karla text-base mx-auto px-8"
     >
       <LayoutHeader />
-      <main>
-        <slot />
-      </main>
-
+      <slot />
+    </div>
+    <home-parallax />
+    <!-- End of parallax -->
+    <div
+      class="content-wrapper ct-no-parallax font-Karla text-base mx-auto px-8"
+    >
+      <home-lifestyle-stories />
+      <!--End of lifestyle-stories-->
+      <home-subscribe />
+      <!--End of subscribe-us-->
       <LayoutFooter />
     </div>
   </div>

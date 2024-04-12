@@ -1,6 +1,6 @@
 <template>
   <div
-    class="subscribe-us h-[350px] bg-[#1d1f2e] flex flex-col justify-center items-center mb-24"
+    class="subscribe-us max-w-screen-2xl w-full h-[350px] bg-[#1d1f2e] flex flex-col justify-center items-center mb-24"
   >
     <div class="flex justify-center items-center px-6 xs:px-0 mb-6">
       <div class="w-8 h-px bg-gray-700"></div>
