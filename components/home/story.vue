@@ -1,15 +1,30 @@
 <template>
-  <div class="story flex justify-center items-center">
-    <div class="px-4 sm:px-16 md:px-32 lg:px-62 xl:px-96 py-32 text-center">
-      <div class="text-3xl leading-10 mb-6">
-        Even the all-powerful Pointing has no control about the blind texts.
-      </div>
+  <div class="ct-subheadline">
+    <div class="ct-subheadline-deco-line"></div>
+    <div class="ct-subheadline-label">Our Coffee Story</div>
+    <div class="ct-subheadline-deco-line"></div>
+  </div>
+  <div
+    class="story flex flex-col lg:flex-row justify-center gap-8 lg:gap-4 w-[95%] lg:w-[65%] mx-auto items-center"
+  >
+    <div class="basis-1/2">
+      <video
+        autoplay
+        loop
+        muted
+        class="w-full h-full object-cover min-h-[333px]"
+      >
+        <source src="/video/coffee-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="text-center lg:text-left basis-1/2 lg:pl-6">
+      <div class="text-3xl leading-10 mb-6">What is your special coffee?</div>
       <div class="text-gray-500 leading-7 mb-6">
-        It is a paradisematic country, in which roasted parts of sentences fly
-        into your mouth. Even the all-powerful Pointing has no control about the
-        blind texts it is an almost unorthographic life One day however a small
-        line of blind text by the name of Lorem Ipsum decided to leave for the
-        far World of Grammar.
+        The French Press is a brewing method that comes closet to cupping.
+        Cupping is the prescribed method by which coffee should be judged.
+        Nothing separates the water from the coffee. To properly discover the
+        flavours, it is best to drink the coffee this way. Everyone has their
+        favourite brewing method.
       </div>
       <div>
         <NuxtLink
