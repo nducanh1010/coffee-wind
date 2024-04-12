@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "deployfb":"cd .ouput/server && rd /s /q node_modules && npm i && cd .. && firebase deploy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "nuxt dev",

@@ -25,5 +25,13 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {}
     }
+  },
+  nitro: {
+    firebase: {
+      gen: 2
+    }
+  }
+  ,build:{
+  
   }
 });
