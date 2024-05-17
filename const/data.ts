@@ -1,16 +1,18 @@
-interface IFeatureMugs {
+export interface IFeatureMugs {
   to?: string;
   price: number;
   discountPrice?: number;
   name: string;
   pictureUrl: string;
 }
-interface ILifeStyleStory {
+export interface ILifeStyleStory {
+  label?: string;
   to?: string;
   thumbnail: string;
   description?: string;
   time: string;
   pictureUrl: string;
+  action: string;
 }
 export const FeatureMugList: IFeatureMugs[] = [
   {
@@ -86,9 +88,52 @@ export const MoreMugsList: IFeatureMugs[] = [
     pictureUrl: "coffee-mug-8.jpg"
   }
 ];
-export const LifeStoryList: ILifeStyleStory[] = [
+export const AllCoffeeMugs: IFeatureMugs[] = [
+  ...MoreMugsList,
   {
     to: "#",
+    price: 69.0,
+    discountPrice: 50.0,
+    name: "Golden Designers Mug",
+    pictureUrl: "feature-mugs-2.jpg"
+  },
+  {
+    to: "#",
+    price: 19.0,
+    name: "White Mug Essential",
+    pictureUrl: "coffee-mug-11.jpg"
+  },
+  {
+    to: "#",
+    price: 29.0,
+    name: "White Ceramic",
+    pictureUrl: "coffee-mug-12.jpg"
+  },
+  {
+    to: "#",
+    price: 15.0,
+    name: "Basic White Mug",
+    pictureUrl: "coffee-mug-9.jpg"
+  },
+
+  {
+    to: "#",
+    price: 39.0,
+    name: "Aroma Art Coffee Mug",
+    pictureUrl: "coffee-mug-14.jpg"
+  },
+  {
+    to: "#",
+    price: 99.0,
+    name: "Blue Premium Mug",
+    pictureUrl: "coffee-mug-13.jpg"
+  }
+];
+export const LifeStoryList: ILifeStyleStory[] = [
+  {
+    action: "read the full story",
+    to: "#",
+    label: "NEW ARTICLE IS LIVE",
     thumbnail:
       "Health Check: why do I get a headache when I haven’t had my coffee?",
     description:
@@ -98,6 +143,8 @@ export const LifeStoryList: ILifeStyleStory[] = [
   },
   {
     to: "#",
+    action: "read the full story",
+    label: "NEW STORE OPENED",
     thumbnail: "How long does a cup of coffee keep you awake?",
     description:
       "It is a paradisematic country, in which roasted parts. Vel qui et ad voluptatem.",
@@ -106,6 +153,7 @@ export const LifeStoryList: ILifeStyleStory[] = [
   },
   {
     to: "#",
+    action: "read the full story",
     thumbnail:
       "Recent research suggests that heavy coffee drinkers may reap health benefits.",
     description:

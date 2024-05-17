@@ -7,8 +7,12 @@
   @apply cursor-pointer py-1 hover:text-gray-800 relative after:lg:absolute after:lg:bottom-0
    after:lg:left-0 after:lg:bg-coffee-200 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300;
 }
-.ct-top-menu-item-active {
+/* .router-link-active {
   @apply text-gray-800 relative after:lg:absolute after:lg:bottom-0
+  after:lg:left-0 after:lg:bg-coffee-200 after:lg:h-0.5  after:lg:w-full;
+} */
+.ct-top-menu-item-active {
+  @apply text-gray-800 relative after:lg:absolute after:lg:bottom-0 font-bold 
   after:lg:left-0 after:lg:bg-coffee-200 after:lg:h-0.5  after:lg:w-full;
 }
 .ct-icon {
@@ -31,15 +35,26 @@
   @apply w-8 h-px bg-gray-200;
 }
 .ct-button {
-  @apply tracking-wider  uppercase  rounded-sm py-4 px-8 text-[13px] text-center font-semibold cursor-pointer hover:bg-opacity-90 duration-200;
+  @apply tracking-wider  uppercase  rounded-sm py-4 px-8 text-[13px] text-center font-semibold cursor-pointer hover:bg-opacity-80 duration-200;
 }
-
+.ct-tabs {
+  @apply flex flex-col w-full items-center justify-center md:flex-row gap-2;
+}
+.ct-tab-item {
+  @apply text-xs w-full md:w-max px-4 py-[10px] text-nowrap font-semibold  flex   items-center justify-center   tracking-[2px] text-coffee-200 h-10 uppercase  border-gray-200 border-[0.5px]  hover:border-coffee-200 hover:text-coffee-400 duration-200;
+}
+.ct-tab-item-active {
+  @apply text-coffee-400 border-coffee-200;
+}
+.show {
+  @apply opacity-100 duration-300 ease-in;
+}
 @media screen(xl) {
-  .ct-parallax{
-    height:70vh;
-    transform-style:preserve-3d
+  .ct-parallax {
+    height: 70vh;
+    transform-style: preserve-3d;
   }
-  .ct-parallax-image{
-    transform:translateZ(-1px) scale(1.5);
+  .ct-parallax-image {
+    transform: translateZ(-1px) scale(1.5);
   }
 }

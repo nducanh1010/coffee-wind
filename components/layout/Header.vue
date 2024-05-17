@@ -18,6 +18,14 @@ const handleClickTopMenu = (event: Event) => {
     isExpanded.value = false;
   }
 };
+const handleSetActive = (index: number) => {
+  if (topMenu.value) {
+    for (const child of topMenu.value.children) {
+      child.classList.remove("ct-top-menu-item-active");
+    }
+    topMenu.value.children[index].classList.add("ct-top-menu-item-active");
+  }
+};
 // click outside dropdown icon
 const handleDropDown = () => {};
 </script>
@@ -36,29 +44,10 @@ const handleDropDown = () => {};
         class="basis-3/6 lg:flex lg:justify-end lg:items-center lg:gap-8 uppercase text-sm text-gray-500 font-medium"
       >
         <li v-for="(item, index) in navigationList" class="ct-top-menu-item">
-          <NuxtLink :href="item.to">{{ item.text }}</NuxtLink>
+          <NuxtLink :href="item.to" @click="() => handleSetActive(index)">{{
+            item.text
+          }}</NuxtLink>
         </li>
-        <!-- <li class="ct-top-menu-item">
-          <NuxtLink href="#">Home</NuxtLink>
-        </li>
-        <li class="ct-top-menu-item ct-top-menu-item-active">
-          <NuxtLink href="#">Products</NuxtLink>
-        </li>
-        <li class="ct-top-menu-item">
-          <NuxtLink href="#">Blog</NuxtLink>
-        </li>
-        <li class="ct-top-menu-item">
-          <NuxtLink href="#">About</NuxtLink>
-        </li>
-        <li class="ct-top-menu-item">
-          <NuxtLink href="#">Contact</NuxtLink>
-        </li>
-        <li class="ct-top-menu-item">
-          <NuxtLink href="#">StyleGuide</NuxtLink>
-        </li>
-        <li class="ct-top-menu-item">
-          <NuxtLink href="#" target="blank">GrassDeveloper</NuxtLink>
-        </li> -->
       </ul>
       <ul
         class="basis-3/6 lg:basis-1/6 flex justify-end lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium"
