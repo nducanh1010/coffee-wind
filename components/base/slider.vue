@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { LifeStoryList, type ILifeStyleStory } from "~/const/data";
 const currentSlide = ref<number>(0);
-const lifeStoryData = ref<ILifeStyleStory[] | null>(LifeStoryList);
+const lifeStoryData = ref<ILifeStyleStory[]>(LifeStoryList);
 const handleNextSlide = () => {
+  if (currentSlide.value === lifeStoryData.value.length - 1)
+    return (currentSlide.value = 0);
   currentSlide.value++;
 };
 const handleBackSlide = () => {
-  if (currentSlide.value === 0) {
-    lifeStoryData.value = [...LifeStoryList, ...(lifeStoryData.value as [])];
-  }
+  if (currentSlide.value === 0)
+    return (currentSlide.value = lifeStoryData.value.length - 1);
   currentSlide.value--;
 };
 </script>
@@ -33,7 +34,7 @@ const handleBackSlide = () => {
     <div class="ct-lifestyle-story-card h-[380px] w-[65%] flex overflow-hidden">
       <div
         :key="index"
-        v-for="(item, index) in LifeStoryList"
+        v-for="(item, index) in lifeStoryData"
         :style="`transform: translateX(-${currentSlide * 100}%);`"
         class="flex-shrink-0 h-full w-full gap-y-16 gap-x-8 flex transition-transform ease-out duration-1000 bg-repeat-x"
       >
@@ -77,7 +78,15 @@ const handleBackSlide = () => {
         </div>
       </div>
     </div>
-
+    <div class="ct-currentSlide absolute bottom-0">
+      <div class="flex items-center justify-center gap-2">
+        <div
+          v-for="(data, index) in lifeStoryData"
+          :class="`${currentSlide === index ? '' : 'bg-opacity-50'}`"
+          class="transition-all w-[5px] h-[5px] mb-[-4rem] bg-gray-800 rounded-full"
+        ></div>
+      </div>
+    </div>
     <svg
       @click="() => handleNextSlide()"
       xmlns="http://www.w3.org/2000/svg"
