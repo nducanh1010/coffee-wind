@@ -7,6 +7,6 @@ const handleChangeTab = (index: number) => {
 </script>
 <template>
   <products-tabs @change-tab="(index:number) => handleChangeTab(index)" />
-  <lazy-base-slider />
+  <lazy-base-slider v-if="tab === 0" />
   <lazy-products-list v-if="tab === 0" v-lazy />
 </template>
