@@ -6,6 +6,8 @@ export default defineNuxtConfig({
  },
   // config directory
   app: {
+    baseURL:'/coffee-wind/',
+    buildAssetsDir:'assets',
     head: {
       link: [
         { rel: "icon", type: "image/png", href: "/coffee-icon.jpg" },
