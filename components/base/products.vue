@@ -19,7 +19,7 @@ const props = defineProps({
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4">
       <div v-for="(item, index) in props.mugList" class="ct-product-card">
         <div
-          :style="`background-image: url( '/${item.pictureUrl}')`"
+          :style="`background-image: url( '/coffee-wind/${item.pictureUrl}')`"
           class="h-[380px] bg-cover bg-no-repeat bg-bottom"
         >
           <NuxtLink :href="item.to" alt="kofe-img">

@@ -17,7 +17,7 @@ import { LifeStoryList } from "~/const/data";
           class="ct-lifestyle-story-card"
         >
           <div
-            :style="`background-image: url( '/${item.pictureUrl}')`"
+            :style="`background-image: url( '/coffee-wind/${item.pictureUrl}')`"
             class="h-[300px] bg-cover bg-no-repeat bg-bottom"
           >
             <NuxtLink :href="item.to" alt="story-img">

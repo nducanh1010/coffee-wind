@@ -53,7 +53,7 @@ module.exports = {
         fadeOut: "fadeOut .3s ease-in-out"
       },
       backgroundImage: {
-        "slider-bg": 'url("/coffee-slider.jpg")'
+        "slider-bg": 'url("/coffee-wind/coffee-slider.jpg")'
       }
     }
   },

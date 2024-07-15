@@ -12,7 +12,7 @@ import { FeatureMugList } from "~/const/data";
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4">
         <div v-for="(item, index) in FeatureMugList" class="ct-product-card">
           <div
-            :style="`background-image: url( '/${item.pictureUrl}')`"
+            :style="`background-image: url( '/coffee-wind/${item.pictureUrl}')`"
             class="h-[400px] sm:h-[540px] bg-cover bg-no-repeat bg-bottom"
           >
             <NuxtLink :href="item.to" alt="kofe-img">

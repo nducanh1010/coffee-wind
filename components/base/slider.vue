@@ -39,7 +39,7 @@ const handleBackSlide = () => {
         class="flex-shrink-0 h-full w-full gap-y-16 gap-x-8 flex transition-transform ease-out duration-1000 bg-repeat-x"
       >
         <div
-          :style="`background-image: url( '/${item.pictureUrl}')`"
+          :style="`background-image: url( '/coffee-wind/${item.pictureUrl}')`"
           class="h-full min-w-[460px] bg-cover bg-no-repeat bg-bottom"
         >
           <NuxtLink :href="item.to" alt="story-img">
